@@ -39,6 +39,14 @@ for (let i = 0; i < input.length; i += 1) {
 }
 console.log(sum);
 
+// Colone 1 > opponent Colonne 2 : me           Score
+
+// A: rock              X : lose                Lost : 0
+// B: paper             Y : draw                Draw : 3
+// C: scissors          Z : win                 Win  : 6
+
+// *********************************************************//
+
 sum = 0;
 // check combinaison manche 2
 for (let i = 0; i < input.length; i += 1) {

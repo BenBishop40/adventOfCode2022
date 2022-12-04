@@ -2498,27 +2498,3 @@ B X
 C X
 A X
 B Z
-
-// check combinaison manche
-for (let i = 0; i < input.length; i += 1) {
-    if (input[i] == "A X\r") {
-        sum += 3;
-    } else if (input[i] == "A Y\r") {
-        sum += 4;
-    } else if (input[i] == "A Z\r") {
-        sum += 8;
-    } else if (input[i] == "B X\r") {
-        sum += 1;
-    } else if (input[i] == "B Y\r") {
-        sum += 5;
-    } else if (input[i] == "B Z\r") {
-        sum += 9;
-    } else if (input[i] == "C X\r") {
-        sum += 2;
-    } else if (input[i] == "C Y\r") {
-        sum += 6;
-    } else if (input[i] == "C Z\r") {
-        sum += 7;
-    }
-}
-console.log(sum);
