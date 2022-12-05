@@ -89,6 +89,8 @@ for (let i = 0; i < input.length; i += 3) {
 console.log(badgeFound);
 let sumBadge = 0;
 
+// Recherche de la valeur des badges cumulés
+
 for (let i = 0; i < badgeFound.length; i += 1) {
     for (j = 0; j <= minuscules.length; j += 1) {
         if (badgeFound[i] == minuscules[j]) {
