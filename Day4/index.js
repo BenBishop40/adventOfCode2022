@@ -34,9 +34,38 @@ for (let i = 0; i < finalArray.length; i += 4) {
         (parseInt(value1) >= parseInt(value3) && parseInt(value2) <= parseInt(value4))
     ) {
         counterOfPairs += 1;
-        console.log(value1, value2, value3, value4);
-        console.log(i);
+        // console.log(value1, value2, value3, value4);
+        // console.log(i);
         // console.log(counterOfPairs);
     }
 }
-console.log(counterOfPairs);
+console.log(`counter of full overlaps : ${counterOfPairs}`);
+
+// Part 2 : identifier les overlaps partiels
+let counterOfPairs2 = 0;
+
+for (let i = 0; i < finalArray.length; i += 4) {
+    let value1 = finalArray[i];
+    let value2 = finalArray[i + 1];
+    let value3 = finalArray[i + 2];
+    let value4 = finalArray[i + 3];
+
+    if (
+        (parseInt(value1) <= parseInt(value3) && parseInt(value2) <= parseInt(value4) && parseInt(value2) >= parseInt(value3)) ||
+        (parseInt(value1) >= parseInt(value3) && parseInt(value2) >= parseInt(value4) && parseInt(value1) <= parseInt(value4))
+    ) {
+        counterOfPairs2 += 1;
+        // console.log(value1, value2, value3, value4);
+        // console.log(i);
+        // console.log(counterOfPairs);
+    } else if (
+        (parseInt(value1) <= parseInt(value3) && parseInt(value2) >= parseInt(value4)) ||
+        (parseInt(value1) >= parseInt(value3) && parseInt(value2) <= parseInt(value4))
+    ) {
+        counterOfPairs2 += 1;
+        // console.log(value1, value2, value3, value4);
+        // console.log(i);
+        // console.log(counterOfPairs);
+    }
+}
+console.log(`counter of partials overlaps : ${counterOfPairs2}`);
