@@ -11,7 +11,6 @@ for (let i = 0; i < input.length; i += 1) {
     let extract = input[i].split("-");
     inputArray.push(extract);
 }
-// console.log(inputArray[0]);
 
 for (let i = 0; i < input.length; i += 1) {
     let extract2 = inputArray.toString().split(",");
@@ -21,6 +20,7 @@ for (let i = 0; i < input.length; i += 1) {
 finalArray = finalArray[0];
 console.log(finalArray);
 
+// Part 1 : identifier les overlaps complet
 let counterOfPairs = 0;
 
 for (let i = 0; i < finalArray.length; i += 4) {
